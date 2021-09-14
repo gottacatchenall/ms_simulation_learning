@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preprint template</title>
+    <script src="https://hypothes.is/embed.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+        :root {
+            --citation: #4F7294;
+            --structure: #31679c;
+
+            --light: #474747;
+            --pale: #a5a5a5;
+            --grey: #e0e0e0;
+            --nav: #fdfdfd;
+
+            --width: 650px;
+            --inner-space: 1.2em;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            margin: 0 0;
+            padding: 0 0;
+        }
+
+        article > p {
+            line-height: 1.5em;
+            padding: 10px 0px;
+            font-size: 1.1em;
+            margin: 0px auto;
+        }
+        article > h1 {
+            padding-top: 2.5em;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+            border-bottom: 1px solid var(--structure);
+        }
+        a:hover {
+            font-weight: 500;
+        }
+        .citation {
+            color: var(--citation);
+        }
+        .container {
+            margin: 0em auto;
+            padding: var(--inner-space);
+        }
+        header > .container {
+            margin-top: 4em;
+        }
+        code, pre {
+            font-family: "Roboto Mono", monospace;
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+
+        .header--title {
+            font-weight: 600;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .header--authors > span {
+            color: var(--light);
+            font-weight: 400;
+        }
+        main {
+            padding-bottom: 8em !important;
+        }
+        footer {
+            background-color: var(--grey);
+            font-weight: 300;
+        }
+
+
+
+        /* max width stuff here */
+        .abstract {
+            color: var(--light);
+            margin: 0em auto;
+            font-size: 0.8em;
+            max-width: 700px;
+        }
+        .abstract p{
+            max-width: 500px;
+        }
+        figure {
+            max-width: 1200px;
+            border: 1px solid var(--pale);
+            border-radius: 2px;
+            margin: 30px auto;
+        }
+        header {
+            font-family: "Roboto", sans-serif;
+            z-index: 5;
+            color: black;
+            margin: 4rem auto 0rem auto;
+            max-width: 700px;
+        }
+        article p{
+            max-width: 700px;
+        }
+        h1, h2, h3 {
+            margin: 10px auto;
+            color: var(--structure);
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            max-width: 700px;
+        }
+        blockquote {
+            font-style: italic;
+            padding: 3px 0px 3px 30px;
+            border-left: 3px solid #404040;
+            margin: 25px auto;
+            font-size: 0.85em;
+            max-width: 500px;
+        }
+        #refs {
+            font-size: 90%;
+            column-count: 2;
+            max-width: 700px;
+            margin: 0px auto;
+        }
+        #refs > .csl-entry {
+            padding-bottom: 0.2em;
+            padding-top: 0.4em;
+            max-width: 500px;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0em auto;
+        }
+        figure > figcaption {
+            padding: var(--inner-space);
+        }
+        table {
+            width: 100%;
+            min-width: 100%;
+            border-collapse: collapse;
+        }
+        table > caption {
+            padding: var(--inner-space);
+        }
+        figcaption, caption {
+            color: var(--light);
+            font-weight: 300;
+        }
+        thead {
+            color: var(--structure);
+        }
+        td, th {
+            padding: 3px;
+        }
+        tr {
+            border-top: 1px solid var(--structure);
+            border-bottom: 1px solid var(--structure);
+        }
+        tbody > tr:nth-child(even) {background: var(--grey)};
+        tbody {
+            border-bottom: 1px solid var(--structure);
+        }
+
+
+        .hanging-indent > .csl-entry {
+            padding-left: 50px ;
+            text-indent: -45px ;
+        }
+
+
+        h1 {
+            font-size: 2.3em;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 1.7em;
+            font-weight: 400;
+        }
+        h3 {
+            font-size: 1.8em;
+        }
+        h4 {
+            font-size: 1.5em;
+        }    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
+    integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
+    integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
+    crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF"
+    crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false }
+                ]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+            <div class="header--title">Preprint template</div>
+            <div class="header--authors">
+                                <span class="header--author">
+                                        <a href="https://orcid.org/0000-0002-6506-6487" target="_blank">
+                        M.D. Catchen
+                    </a>
+                                                                <sup class="affilcode">1</sup>
+                                            <sup class="affilcode">2</sup>
+                                    </span>
+                        </div>
+    </header>
+
+    <main class="container">
+        <section class="abstract">
+            <b>Abstract:</b> <p>This template is used by the Poisot lab at Université de Montréal to write manuscripts using github. It uses github actions as a way to generate a website that can be annotated using hypothes.is, a PDF document for copy-editing and submission to journals, and a PDF document for submission to preprint servers. At every push on the master branch, the whole series of documents will be updated automatically.</p><br />
+            <div class="artifacts">
+                <a href="draft.pdf" title="Draft PDF" target="_blank">draft</a>
+                <a href="preprint.pdf" title="Preprint PDF" target="_blank">preprint</a>
+            </div>
+        </section>
+
+        <article>
+            <h1 id="outline">Outline</h1>
+            <p>Introduction: - Predictive ecology and predicting interactions - Data is scarce - Idea you can train a predictive model on simulated data and apply it to real data and it makes good predictions - It might seem wild that this can work, but here we show ….</p>
+            <p>Methods</p>
+            <ul>
+            <li><p>concept figure with (niche model, mpn) instead of (hypoth 1, 2)</p></li>
+            <li><p>Empirical data from Streams in NZ</p></li>
+            <li><p>Julia 1.6, EN, Flux, etc.</p></li>
+            </ul>
+            <p>For each empirical network, we predict the interactions by training a neural network — structure of neural net todo . For each of these neural nets, we do not train them on any real data, but instead only on simulated networks from each of the candidate models with <span class="math inline"><em>S</em><sub><em>i</em></sub></span> species and betabinom connectance.</p>
+            <p>Summary stats to describe network properties are inevitably necessary.</p>
+            <ul>
+            <li>abc discussion and history</li>
+            <li>generative learning discussion and history</li>
+            </ul>
+            <p>explain why you can’t predict interaction between two species based on anything but summary stats.</p>
+            <p>We generate networks from various candidate models: cascade, niche, mpn, etc.</p>
+            <p>Results</p>
+            <ul>
+            <li></li>
+            </ul>
+            <p>Discussion</p>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h2>Affiliations</h2>
+            <sup>1</sup>&nbsp;McGill University; <sup>2</sup>&nbsp;Québec Centre for Biodiversity Sciences
+            <br />
+            
+        </div>
+    </footer>
+
+</body>
+</html>
